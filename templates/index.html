@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife Tracker</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>FitLife Tracker</h1>
+        <nav>
+            <a href="#exercise-log">Exercise Log</a>
+            <a href="#diet-planner">Diet Planner</a>
+            <a href="#progress-charts">Progress Charts</a>
+            <a href="#bmi-calculator">BMI Calculator</a>
+        </nav>
+    </header>
+    <main>
+        <section id="exercise-log">
+            <h2>Exercise Log</h2>
+            <form id="exercise-form">
+                <label for="exercise-name">Exercise:</label>
+                <input type="text" id="exercise-name" required>
+                <label for="duration">Duration (minutes):</label>
+                <input type="number" id="duration" required>
+                <button type="submit">Add Exercise</button>
+            </form>
+            <ul id="exercise-list"></ul>
+        </section>
+        <section id="diet-planner">
+            <h2>Diet Planner</h2>
+            <form id="diet-form">
+                <label for="meal-name">Meal:</label>
+                <input type="text" id="meal-name" required>
+                <label for="calories">Calories:</label>
+                <input type="number" id="calories" required>
+                <button type="submit">Add Meal</button>
+            </form>
+            <ul id="diet-list"></ul>
+        </section>
+        <section id="progress-charts">
+            <h2>Progress Charts</h2>
+            <canvas id="progress-chart" width="400" height="400"></canvas>
+        </section>
+        <section id="bmi-calculator">
+            <h2>BMI Calculator</h2>
+            <form id="bmi-form">
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" required>
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" required>
+                <button type="submit">Calculate BMI</button>
+            </form>
+            <div id="bmi-result"></div>
+        </section>
+    </main>
+        <footer>
+            <p>&copy; 2024 FitLife Tracker. All rights reserved.</p>
+            <p>
+                Follow us on:
+                <a href="www.x.com/kukan_pee">Twitter</a> |
+                <a href="www.linkedin.com/in/precious-chidi-obinichi">LinkedIn</a>
+            </p>
+        </footer>
+   <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/66b1685832dca6db2cba591f/1i4ifv6o7';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
